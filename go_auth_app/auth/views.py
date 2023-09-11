@@ -7,7 +7,7 @@ class UserProfileView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        content = {'message': 'Hello, World!','user':request.user.username}
+        content = {'first_name': request.user.first_name,'user':request.user.last_name}
         return Response(content)
 
 # Create your views here.
