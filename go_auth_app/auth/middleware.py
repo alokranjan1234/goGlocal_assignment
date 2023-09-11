@@ -4,6 +4,9 @@ from django.contrib.auth.middleware import AuthenticationMiddleware
 
 
 class AuthMiddleware(AuthenticationMiddleware):
+    '''
+    AuthMidddleware to set user attribute in request
+    '''
 
     def __init__(self, get_response):
         self.get_response = get_response
