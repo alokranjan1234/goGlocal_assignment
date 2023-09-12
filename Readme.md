@@ -16,6 +16,12 @@ A Django application for authenticating users using JWT tokens
 ## Endpoints
     ### login
     curl -X POST   -H "Content-Type: application/json"   -d '{"username": "test_user", "password": "test#123$"}'   http://localhost:8000/auth/api/user/login/`
+    response: 
+        payload: {"refresh":"REFRESH_TOKEN_STR","access":"ACCESS_TOKEN_STR"}
+        status: 200
 
     ### profile info
     curl -X GET  http://localhost:8000/auth/api/user/profile/ -H 'Authorization: Token {ACCESS_TOKEN}'
+    response: 
+        payload: {"first_name":"test","last_name":"user"}
+        status: 200
